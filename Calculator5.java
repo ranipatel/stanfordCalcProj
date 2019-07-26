@@ -1,7 +1,8 @@
- import java.util.Scanner;
+package calculator5;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-public class Calculator3
+public class Calculator5
 {
     public static void main(String[] args) 
     {
@@ -9,19 +10,15 @@ public class Calculator3
 		
 		double number1,number2,answer = 0.0;
                 boolean a = true;
-		char operation, quit;
+		char operation;
+                String ndfsd;
                 
-		System.out.print("enter a number: "); 
-		number1 = input.nextInt(); 
-		System.out.print("enter another number: ");
-		number2 = input.nextInt();
-		System.out.print("enter an operation: "); 
-		operation=input.next().charAt(0);
+                
+                System.out.print("Welcome to my calculator! Use + for addition, - for subtraction, * for multiplication, / for division, and ^ for squaring numbers. Press enter to start:");
+                ndfsd = input.nextLine();
                 
                 while (a = true) {
-                    
-                System.out.print("do you want to quit?: ");
-                quit = input.next().charAt(0);
+
 		System.out.print("enter a number: "); 
 		number1 = input.nextInt(); 
 		System.out.print("enter another number: ");
@@ -51,16 +48,9 @@ public class Calculator3
                     answer = Math.pow(number1, number2);
                     System.out.println(number1 + " " + operation + " "  + number2 + " is " + " " + answer );
                 }
-                else if(quit == 'y') {
-                    break;
-                }
-                else if(quit == 'n') {
-                    
-                }
 		else
 		System.out.println("try again");
 		
                 }
 	}
-
 }
